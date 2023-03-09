@@ -122,12 +122,12 @@ Function activity 3:
 const pinNo = 1234; // for security reasons, please contact the programmer to change your pin
 let balance = 150;
 
-const checkFunds = (amount) => {
-    return ((amount <= balance) ? true : false);
-}
-
 const checkPin = (pinIn) => {
     return ((pinIn === pinNo) ? true : false);
+}
+
+const checkFunds = (amount) => {
+    return ((amount <= balance) ? true : false);
 }
 
 const updateBalance = (amount) => {
