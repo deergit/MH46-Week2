@@ -249,27 +249,6 @@ for (let n of numberList) {
     console.log(`${n} squared is ${n ** 2}`);
 }
 
-/* this implementation is probably incorrect, but it's functional *
-
-console.log(`
-for...in loop:
-`);
-
-const carObj = { 
-    ford: ["mondeo", "focus"],
-    toyota: ["supra", "corolla"],
-    honda: ["civic"]
-};
-
-let desiredModel = "supra";
-
-for (let c in carObj) {
-    console.log(`${c} has these models available: ${carObj[c]}`);
-    ( carObj[c].includes(desiredModel) ) ? console.log(`the ${desiredModel} is in stock!`) : console.log(`the ${desiredModel} is NOT in stock.`);
-}
-
-************************************************/
-
 console.log(`
 
 ----- While loops -----
