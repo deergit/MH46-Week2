@@ -20,3 +20,8 @@ const me = {
 };
 
 console.log(me);
+console.log(`
+My name is ${me.name}
+I am ${me.age} years old (christ)
+${me.tired ? "I am tired" : "I'm feeling funky fresh"}
+`);
