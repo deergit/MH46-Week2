@@ -1,4 +1,29 @@
-console.log("All Around The World".charAt(7).toUpperCase());
+console.log(`
+Dot Notation Activity 1
+`);
+
+const drawGrid = (colCount = 3, rowCount = 3, cellWidth = 6, cellHeight = 3, vSep = "┃", hSep = "━", xSep = "╋") => {
+    for (r = 0; r < rowCount; r++) {
+        for (c = 0; c < cellHeight; c++) {
+            for (p = 0; p < colCount; p++) {
+                process.stdout.write(" ".repeat(cellWidth) + (p < (colCount - 1) ? vSep : ""));
+            }
+            process.stdout.write("\n");
+        }
+        for (p = 0; p < colCount; p++) {
+            if (r < (rowCount -1)) { process.stdout.write(hSep.repeat(cellWidth) + (p < (colCount - 1) ? xSep : "")); }
+        }
+        process.stdout.write("\n");
+    }
+}
+
+drawGrid();
+
+drawGrid(5, 2);
+
+drawGrid(4, 4, 3, 2);
+
+drawGrid(12, 4, 4, 2, "!", "-", "O");
 
 console.log(`
 Variables Activity 1

@@ -57,6 +57,20 @@ const cafe = {
     }
 };
 
+console.log(`hasSpecialOffers is true:
+${cafe.openCafe()}
+${cafe.closeCafe()}
+`);
+
+cafe.hasSpecialOffers = false;
+
+console.log(`hasSpecialOffers is false:
+${cafe.openCafe()}
+${cafe.closeCafe()}
+`);
+
+// Example 2:
+
 let time = Math.floor((Math.random() * 2400) + 1);
 console.log(`the time is ${time.toString().padStart(4, "0").slice(0, 2)}:${time.toString().padStart(4, "0").slice(2, 4)}${time < 1200 ? "am" : "pm"}`); // good idea in theory but I don't think 12:85pm is a valid time
 if (time < 1100) {
@@ -79,6 +93,17 @@ const alarmObj = {
 
 let alarm = "";
 let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+for (let d of days) {
+    if (d === "Saturday" || d === "Sunday") {
+        alarm = alarmObj.weekendAlarm;
+    } else {
+        alarm = alarmObj.weekdayAlarm;
+    }
+    console.log(`Today is ${d}, ${alarm}`);
+}
+
+// alternatively:
 
 for (let d of days) {
     switch (d) {
@@ -114,18 +139,6 @@ My favourite songs are:
     ${me.favSongs[2]}
     ${me.favSongs[3]}
     ${me.favSongs[4]}
-`);
-
-console.log(`hasSpecialOffers is true:
-${cafe.openCafe()}
-${cafe.closeCafe()}
-`);
-
-cafe.hasSpecialOffers = false;
-
-console.log(`hasSpecialOffers is false:
-${cafe.openCafe()}
-${cafe.closeCafe()}
 `);
 
 *************************************************
@@ -246,7 +259,7 @@ const coffeeShop = {
     }
 }
 
-function orderItem(name) {
+const orderItem = (name) => {
     const drink = coffeeShop.drinks.find((obj) => {
         return obj.name === name;
     });

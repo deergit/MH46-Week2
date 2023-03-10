@@ -43,7 +43,7 @@ console.log(addUp(2, 5));
 
 Example 4:
 
-function square(number) {
+const square = (number) => {
     return number * number;
 }
 
@@ -52,11 +52,11 @@ console.log(square(7));
 
 /* Alternate declarations of functions:
 
-*   const square = function(number) {
+*   const square = function (number) {
 *       return number * number;
 *   }
 *   
-*   const square = (number) => {
+*   function square (number) {
 *       return number * number;
 *   }
 
@@ -75,12 +75,12 @@ console.log(`The temperature is ${getFarenheit(15)}°F`);
 ************************************************/
 
 console.log(`
-Function activity 1:
+Function activity 1
 `);
 
 /*
 function factorial (n) {
-    if ((n === 0) || (n === 1)) {
+    if ( (n === 0) || (n === 1) ) {
         return 1;
     } else {
         return (n * factorial(n-1));
@@ -101,7 +101,7 @@ console.log(factorial(9));
 console.log(factorial(3));
 
 console.log(`
-Function activity 2:
+Function activity 2
 `);
 
 let orderCount = 0;
@@ -116,7 +116,7 @@ takeOrder("ham", "mushroom");
 takeOrder("mushroom", "chicken");
 
 console.log(`
-Function activity 3:
+Function activity 3
 `);
 
 const pinNo = 1234; // for security reasons, please contact the programmer to change your pin

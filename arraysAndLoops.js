@@ -34,27 +34,23 @@ const favouriteSongs = [
     "Dean Town - Vulfpeck"
 ];
 
-console.log(favouriteSongs.join("\n\n") + "\n\n");
-
+console.log(favouriteSongs.join("\n") + "\n");
 favouriteSongs.push("WEIGHT OFF - BadBadNotGood", "Wonderful Christmas Time - Paul McCartney");
-
-console.log(favouriteSongs.join("\n\n") + "\n\n");
-
+console.log(favouriteSongs.join("\n") + "\n");
 favouriteSongs.pop();
-
-console.log(favouriteSongs.join("\n\n") + "\n\n");
+console.log(favouriteSongs.join("\n") + "\n");
 
 console.log(`
 Array Activity 2
 `);
 
 const arrAnim = [
-    "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""
+    "█", "▉", "▊", "▋", "▌", "▍", "▎", "▏", " ", "▗"
 ];
 
 console.log(arrAnim.join("")); // print the starting array
 
-for (const f in arrAnim) {
+for (const f of arrAnim) {
     arrAnim.push(arrAnim.shift()); // removes the first element from the array and adds it to the end
     console.log(arrAnim.join(""));
 }
@@ -70,7 +66,7 @@ let favDrinks = [
     "Red Bull"
 ];
 
-// with arrays: slow, lame, not repeatable ******
+// with arrays: slow to type, not repeatable
 
 console.log("The array version:");
 console.log(favDrinks[0]);
@@ -78,14 +74,14 @@ console.log(favDrinks[1]);
 console.log(favDrinks[2]);
 console.log(favDrinks[3] + "\n");
 
-// the chad loop ********************************
+// the loop solution:
 
 console.log("The loop version:");
 for (let i = 0; i < favDrinks.length; i++) {
     console.log(favDrinks[i]);
 }
 
-// embedding if into for ************************
+// embedding if into for
 
 let multiplesTwo = [];
 
