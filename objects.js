@@ -150,3 +150,27 @@ console.log(person.sayHi());
 person.name = "Terry";
 
 console.log(person.sayHi());
+
+console.log(`
+Object Activity 2
+`);
+
+const pet = {
+    name: "muffins",
+    typeOfPet: "cat",
+    age: 4,
+    color: "white",
+
+    eat() {
+        return `${this.name} the ${this.typeOfPet} is eating`;
+    },
+    
+    drink() {
+        return `${this.name} the ${this.typeOfPet} is drinking`;
+    }
+};
+
+console.log(`
+${pet.eat()}
+${pet.drink()}
+`);
