@@ -255,14 +255,10 @@ console.log(`
 for...in loop:
 `);
 
-let fordModels = ["mondeo", "focus"];
-let toyotaModels = ["supra", "corolla"];
-let hondaModels = ["civic"];
-
 const carObj = { 
-    ford: fordModels,
-    toyota: toyotaModels,
-    honda: hondaModels
+    ford: ["mondeo", "focus"],
+    toyota: ["supra", "corolla"],
+    honda: ["civic"]
 };
 
 let desiredModel = "supra";

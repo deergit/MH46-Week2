@@ -75,3 +75,22 @@ for (let d of days) {
     }
     console.log(`Today is ${d}, ${alarm}`);
 }
+
+// Mini activity 1: the sequel
+
+me.favSongs = [
+    "Vulfpeck - Dean Town",
+    "1e&a - Ben Sloan, Madeline Kenney",
+    "WEIGHT OFF - BadBadNotGood",
+    "Portrait of Tracy - Jaco Pastorius",
+    "Take Five - The Dave Brubeck Quartet"
+]
+
+console.log(`
+My favourite songs are:
+    ${me.favSongs[0]}
+    ${me.favSongs[1]}
+    ${me.favSongs[2]}
+    ${me.favSongs[3]}
+    ${me.favSongs[4]}
+`);
