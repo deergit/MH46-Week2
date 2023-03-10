@@ -146,3 +146,7 @@ const person = {
 };
 
 console.log(person.sayHi());
+
+person.name = "Terry";
+
+console.log(person.sayHi());
