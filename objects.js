@@ -47,7 +47,11 @@ const cafe = {
 
     /* ES6: New method! */
     openCafe() {
-        return "Come on in!";
+        if (this.hasSpecialOffers) {
+            return "Come and enjoy one of our special offers!";
+        } else {
+            return "Come on in!";
+        }
     },
     closeCafe() {
         return "We are closed, come back tomorrow!";
