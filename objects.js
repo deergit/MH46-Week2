@@ -36,10 +36,20 @@ const cafe = {
     lunchOffer: "Free drink with surprisingly priced sandwich",
     noOffer: "Sorry, no offer",
 
+    /* old method
     openCafe: ()=>{
         return "Come on in!";
     },
     closeCafe: ()=>{
+        return "We are closed, come back tomorrow!";
+    }
+    */
+
+    /* ES6: New method! */
+    openCafe() {
+        return "Come on in!";
+    },
+    closeCafe() {
         return "We are closed, come back tomorrow!";
     }
 };
