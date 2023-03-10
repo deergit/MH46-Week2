@@ -1,6 +1,6 @@
 /************************************************
 Object examples:
-************************************************/
+*************************************************
 
 // Mini activity 1
 const me = {
@@ -36,16 +36,15 @@ const cafe = {
     lunchOffer: "Free drink with surprisingly priced sandwich",
     noOffer: "Sorry, no offer",
 
-    /* old method
-    openCafe: ()=>{
-        return "Come on in!";
-    },
-    closeCafe: ()=>{
-        return "We are closed, come back tomorrow!";
-    }
-    */
+    // old method
+    // openCafe: ()=>{
+    //     return "Come on in!";
+    // },
+    // closeCafe: ()=>{
+    //     return "We are closed, come back tomorrow!";
+    // }
 
-    /* ES6: New method! */
+    // ES6: New method!
     openCafe() {
         if (this.hasSpecialOffers) {
             return "Come and enjoy one of our special offers!";
@@ -116,7 +115,34 @@ My favourite songs are:
     ${me.favSongs[4]}
 `);
 
-console.log(`
+console.log(`hasSpecialOffers is true:
 ${cafe.openCafe()}
 ${cafe.closeCafe()}
 `);
+
+cafe.hasSpecialOffers = false;
+
+console.log(`hasSpecialOffers is false:
+${cafe.openCafe()}
+${cafe.closeCafe()}
+`);
+
+*************************************************
+Object Activities:
+************************************************/
+
+console.log(`
+Object Activity 1
+`);
+
+const person = {
+    name: "Josh",
+    age: 27,
+    tired: true,
+
+    sayHi() {
+        return `Hello, my name is ${this.name}!`
+    }
+};
+
+console.log(person.sayHi());
