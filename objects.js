@@ -34,7 +34,14 @@ const cafe = {
 
     breakfastOffer: "Free croissant with coffee",
     lunchOffer: "Free drink with surprisingly priced sandwich",
-    noOffer: "Sorry, no offer"
+    noOffer: "Sorry, no offer",
+
+    openCafe: ()=>{
+        return "Come on in!";
+    },
+    closeCafe: ()=>{
+        return "We are closed, come back tomorrow!";
+    }
 };
 
 console.log(`the time is ${time.toString().padStart(4, "0").slice(0, 2)}:${time.toString().padStart(4, "0").slice(2, 4)}${time < 1200 ? "am" : "pm"}`);
@@ -93,4 +100,9 @@ My favourite songs are:
     ${me.favSongs[2]}
     ${me.favSongs[3]}
     ${me.favSongs[4]}
+`);
+
+console.log(`
+${cafe.openCafe()}
+${cafe.closeCafe()}
 `);
