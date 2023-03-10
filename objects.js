@@ -57,7 +57,8 @@ const cafe = {
     }
 };
 
-console.log(`the time is ${time.toString().padStart(4, "0").slice(0, 2)}:${time.toString().padStart(4, "0").slice(2, 4)}${time < 1200 ? "am" : "pm"}`);
+let time = Math.floor((Math.random() * 2400) + 1);
+console.log(`the time is ${time.toString().padStart(4, "0").slice(0, 2)}:${time.toString().padStart(4, "0").slice(2, 4)}${time < 1200 ? "am" : "pm"}`); // good idea in theory but I don't think 12:85pm is a valid time
 if (time < 1100) {
     offer = cafe.breakfastOffer;
     console.log(`\n${offer}\n`);
@@ -173,4 +174,105 @@ const pet = {
 console.log(`
 ${pet.eat()}
 ${pet.drink()}
+`);
+
+console.log(`
+Object Activity 3
+`);
+
+const coffeeShop = {
+    branch: "Southport",
+    drinks: [
+        {
+            name: "Cappuccino",
+            price: 4.5,
+        },
+        {
+            name: "Latte",
+            price: 5.0,
+        },
+        {
+            name: "Filter Coffee",
+            price: 2.0,
+        },
+        {
+            name: "Tea",
+            price: 2.5,
+        },
+        {
+            name: "Hot Chocolate",
+            price: 3.0,
+        }
+    ],
+
+    foods: [
+        {
+            name: "Croissant",
+            price: 3,
+        },
+        {
+            name: "Muffin",
+            price: 4,
+        },
+        {
+            name: "Toast",
+            price: 2,
+        }
+    ],
+
+    orderedDrinks: [],
+    orderedFoods: [],
+
+    drinksOrdered() {
+        let outputStr = "";
+        let drinksCost = 0;
+
+        for (let item in this.orderedDrinks) {
+            outputStr = outputStr + `${this.orderedDrinks[item][0]}: £${this.orderedDrinks[item][1]}\n`;
+            drinksCost = drinksCost += this.orderedDrinks[item][1];
+        }
+        return [`${outputStr}\nTotal cost for drinks: £${drinksCost}\n`, drinksCost];
+    },
+
+    foodOrdered() {
+        let outputStr = "";
+        let foodsCost = 0;
+
+        for (let item in this.orderedFoods) {
+            outputStr = outputStr + `${this.orderedFoods[item][0]}: £${this.orderedFoods[item][1]}\n`;
+            foodsCost = foodsCost += this.orderedFoods[item][1];
+        }
+        return [`${outputStr}\nTotal cost for food: £${foodsCost}\n`, foodsCost];
+    }
+}
+
+function orderItem(name) {
+    const drink = coffeeShop.drinks.find((obj) => {
+        return obj.name === name;
+    });
+    if (drink != undefined) { coffeeShop.orderedDrinks.push([drink.name, drink.price]); return }
+
+    const food = coffeeShop.foods.find((obj) => {
+        return obj.name === name;
+    });
+    if (food != undefined) { coffeeShop.orderedFoods.push([food.name, food.price]); return }
+}
+
+orderItem("Tea");
+orderItem("Latte");
+orderItem("Croissant");
+orderItem("Hot Chocolate");
+
+coffeeShop.drinks.push({ name: "Chai Latte", price: 6.25 });
+
+orderItem("Chai Latte");
+orderItem("Toast");
+
+console.log(`
+Drinks ordered:
+${coffeeShop.drinksOrdered()[0]}
+Food ordered:
+${coffeeShop.foodOrdered()[0]}
+
+Total order cost: £${coffeeShop.drinksOrdered()[1] + coffeeShop.foodOrdered()[1]}
 `);
