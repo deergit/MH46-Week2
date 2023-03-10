@@ -12,3 +12,11 @@ const cafe = {
 };
 
 console.log(cafe);
+
+const me = {
+    name: "Josh",
+    age: 27,
+    tired: true
+};
+
+console.log(me);
