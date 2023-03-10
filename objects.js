@@ -18,7 +18,7 @@ ${me.tired ? "I am tired" : "I'm feeling funky fresh"}
 // Example 1:
 
 let offer = "none";
-let time = 1200;
+let time = Math.floor((Math.random() * 2400) + 1);
 
 const cafe = {
     name: "Whitesheep",
@@ -37,10 +37,14 @@ const cafe = {
     noOffer: "Sorry, no offer"
 };
 
+console.log(`the time is ${time.toString().padStart(4, "0").slice(0, 2)}`);
 if (time < 1100) {
     offer = cafe.breakfastOffer;
     console.log(`\n${offer}\n`);
 } else if (time < 1500) {
     offer = cafe.lunchOffer;
+    console.log(`\n${offer}\n`);
+} else {
+    offer = cafe.noOffer;
     console.log(`\n${offer}\n`);
 }
