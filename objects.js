@@ -279,6 +279,9 @@ orderItem("Hot Chocolate");
 coffeeShop.drinks.push({ name: "Chai Latte", price: 6.25 });
 
 orderItem("Chai Latte");
+orderItem();
+orderItem("");
+orderItem("this item does not exist");
 orderItem("Toast");
 
 console.log(`
